@@ -12,7 +12,7 @@ app.use(taskRouter);
 mongoose
   .connect(
     
-    "mongodb+srv://admin:admin@12@clustertodo.3jmwegu.mongodb.net/?retryWrites=true&w=majority&appName=ClusterTODO",
+    "url",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
