@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 3000;
 app.use(body_parser_1.default.json());
 app.use(routes_1.default);
 mongoose_1.default
-    .connect("mongodb+srv://admin:admin@12@clustertodo.3jmwegu.mongodb.net/", 
-// "mongodb+srv://admin:admin@12@clustertodo.3jmwegu.mongodb.net/?retryWrites=true&w=majority&appName=ClusterTODO",
+    .connect("url", 
+
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
