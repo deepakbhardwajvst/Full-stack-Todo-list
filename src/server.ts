@@ -10,10 +10,14 @@ app.use(bodyParser.json());
 app.use(taskRouter);
 
 mongoose
-  .connect("mongodb://localhost:27017/todo", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    
+    "mongodb+srv://admin:admin@12@clustertodo.3jmwegu.mongodb.net/?retryWrites=true&w=majority&appName=ClusterTODO",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    } as any
+  ) // Suppressing error with 'as any'
   .then(() => {
     console.log("Connected to MongoDB");
     app.listen(PORT, () => {

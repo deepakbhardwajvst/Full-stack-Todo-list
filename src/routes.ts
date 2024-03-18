@@ -8,7 +8,8 @@ router.get("/tasks", async (req: Request, res: Response) => {
   try {
     const tasks: ITask[] = await Task.find();
     res.json(tasks);
-  } catch (error) {
+  } catch (error: any) {
+    // Explicitly typing error as 'any'
     res.status(500).json({ message: error.message });
   }
 });
@@ -23,7 +24,8 @@ router.post("/tasks", async (req: Request, res: Response) => {
   try {
     const newTask: ITask = await task.save();
     res.status(201).json(newTask);
-  } catch (error) {
+  } catch (error: any) {
+    // Explicitly typing error as 'any'
     res.status(400).json({ message: error.message });
   }
 });
